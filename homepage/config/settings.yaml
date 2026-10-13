@@ -1,0 +1,13 @@
+---
+# https://gethomepage.dev/configs/settings/
+title: Home
+headerStyle: boxed
+background:
+  blur: sm
+  saturate: 50
+  brightness: 50
+color: slate
+layout:
+  Self-Hosted:
+    style: row
+    columns: 3

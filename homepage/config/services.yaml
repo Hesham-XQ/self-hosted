@@ -1,0 +1,26 @@
+---
+# https://gethomepage.dev/configs/services/
+- Self-Hosted:
+    - Gitea:
+        icon: gitea.png
+        href: http://192.168.106.132:3000/
+        description: Self-hosted Git service alternative
+        container: gitea
+        server: my-docker
+        siteMonitor: http://192.168.106.132:3000/
+
+    - Portainer:
+        icon: portainer.png
+        href: https://192.168.106.132:9443/
+        description: Docker management UI
+        container: portainer
+        server: my-docker
+        siteMonitor: https://192.168.106.132:9443/
+
+    - OneUptime:
+        icon: mdi-chart-line
+        href: http://192.168.106.132/
+        description: Uptime & observability platform
+        container: oneuptime-ingress-1
+        server: my-docker
+        siteMonitor: http://192.168.106.132/

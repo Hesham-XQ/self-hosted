@@ -1,0 +1,14 @@
+# Homepage - unified dashboard/landing page for self-hosted apps
+# https://gethomepage.dev
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    restart: unless-stopped
+    ports:
+      - "3001:3000"   # web UI
+    environment:
+      - HOMEPAGE_ALLOWED_HOSTS=192.168.106.132:3001,localhost:3001
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
