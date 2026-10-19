@@ -1,0 +1,9 @@
+{
+	# Ports 80/443 are used by other containers
+	auto_https disable_redirects
+}
+
+https://192.168.106.132:8444 {
+	tls internal
+	reverse_proxy 127.0.0.1:8222
+}

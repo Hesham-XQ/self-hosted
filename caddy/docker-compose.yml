@@ -1,0 +1,12 @@
+# Caddy - local HTTPS reverse proxy (internal CA)
+services:
+  caddy:
+    image: caddy:2
+    container_name: caddy
+    restart: unless-stopped
+    # Host network so it can reach services bound to 127.0.0.1
+    network_mode: host
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./data:/data
+      - ./config:/config

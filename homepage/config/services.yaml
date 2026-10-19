@@ -24,3 +24,10 @@
         container: oneuptime-ingress-1
         server: my-docker
         siteMonitor: http://192.168.106.132/
+
+    - Vaultwarden:
+        icon: vaultwarden.png
+        href: https://192.168.106.132:8444/
+        description: Password manager
+        container: vaultwarden
+        server: my-docker

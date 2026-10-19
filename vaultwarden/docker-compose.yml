@@ -1,0 +1,16 @@
+# Vaultwarden - lightweight Bitwarden-compatible password manager
+# https://github.com/dani-garcia/vaultwarden
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    environment:
+      - DOMAIN=https://192.168.106.132:8444
+      # Set to false after creating your account
+      - SIGNUPS_ALLOWED=false
+    volumes:
+      - ./data:/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "127.0.0.1:8222:80"   # reached via Caddy on 8444
